@@ -5,16 +5,19 @@ angular.module( 'starter.controllers', [] )
   $scope.postName = 'front-page';
 })
 
+.controller( 'schedule', function( $scope, $config ) {
+  $scope.config = $config;
+  $scope.postName = 'front-page';
+} )
+
 .controller( 'location', function( $scope, $config ) {
   $scope.config = $config;
+  $scope.postName = 'front-page';
 } )
 
 .controller( 'timeline', function( $scope, $config ) {
   $scope.config = $config;
-} )
-
-.controller( 'timeline', function( $scope, $config ) {
-  $scope.config = $config;
+  $scope.postName = 'front-page';
 } )
 
 .controller( 'single', function( $scope, $stateParams, $config ) {

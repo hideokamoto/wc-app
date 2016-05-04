@@ -59,6 +59,36 @@ angular.module('starter', [
     }
   })
 
+  .state('app.schedule', {
+    url: '/schedule',
+    views: {
+      'tab-schedule': {
+        templateUrl: 'templates/tab-schedule.html',
+        controller: 'schedule'
+      }
+    }
+  })
+
+  .state('app.location', {
+    url: '/location',
+    views: {
+      'tab-location': {
+        templateUrl: 'templates/tab-location.html',
+        controller: 'location'
+      }
+    }
+  })
+
+  .state('app.timeline', {
+    url: '/timeline',
+    views: {
+      'tab-timeline': {
+        templateUrl: 'templates/tab-timeline.html',
+        controller: 'timeline'
+      }
+    }
+  })
+
   .state('app.single', {
     url: '/post/:id',
     views: {
