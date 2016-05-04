@@ -1,0 +1,10 @@
+<ion-view>
+  <ion-content class="padding">
+    <have-posts api-root="{{ config.apiRoot }}"
+          post-type="posts" post-id="{{ postId }}">
+      <the-post-thumbnail size="post-thumbnail"></the-post-thumbnail>
+      <h2 class="entry-title"><the-title></the-title></h1>
+      <the-content></the-content>
+    </have-posts>
+  </ion-content>
+</ion-view>
