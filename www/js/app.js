@@ -9,11 +9,12 @@ angular.module('starter', [
   'ionic',
   'starter.controllers',
   'starter.services',
+  'ngSanitize',
   'wp'
 ])
 
 .constant( '$config', {
-  apiRoot: 'http://api.wp-app.org/wp-json/wp/v2'
+  apiRoot: 'http://vccw.dev/wp-json'
 } )
 
 .run(function($ionicPlatform) {

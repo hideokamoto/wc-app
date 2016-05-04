@@ -1,10 +1,9 @@
 <ion-view view-title="WordCamp Kansai 2016">
   <ion-content>
-    <have-posts api-root="{{ config.apiRoot }}"
-          post-type="posts" per-page="10">
-      <the-post-thumbnail size="post-thumbnail"></the-post-thumbnail>
-      <h2 class="entry-title"><the-title></the-title></h1>
-      <the-content></the-content>
-    </have-posts>
+    <ion-list>
+      <ion-item ng-repeat="post in posts" href="#/app/post/{{ post.ID }}">
+        {{ post.title }}
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>
