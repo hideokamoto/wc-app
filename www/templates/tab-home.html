@@ -1,8 +1,7 @@
 <ion-view view-title="WordCamp Kansai 2016">
   <ion-content>
-    <img src="http://api.wp-app.org/wp-content/uploads/2013/03/soworthloving-wallpaper-1024x640.jpg">
     <have-posts api-root="{{ config.apiRoot }}"
-          post-type="pages" per-page="1" filter="{ name: postName }">
+          post-type="posts" per-page="10">
       <the-post-thumbnail size="post-thumbnail"></the-post-thumbnail>
       <h2 class="entry-title"><the-title></the-title></h1>
       <the-content></the-content>

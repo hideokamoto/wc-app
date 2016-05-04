@@ -2,7 +2,6 @@ angular.module( 'starter.controllers', [] )
 
 .controller( 'home', function( $scope, $config ) {
   $scope.config = $config;
-  $scope.postName = 'front-page';
 })
 
 .controller( 'schedule', function( $scope, $config ) {
