@@ -1,0 +1,14 @@
+<ion-view view-title="Location">
+  <ion-content class="padding">
+<<<<<<< HEAD
+
+=======
+    <have-posts api-root="{{ config.apiRoot }}"
+          post-type="pages" per-page="1" filter="{ name: postName }">
+      <the-post-thumbnail size="post-thumbnail"></the-post-thumbnail>
+      <h2 class="entry-title"><the-title></the-title></h2>
+      <the-content></the-content>
+    </have-posts>
+>>>>>>> b873f232d6339f2c461eb11c4b3d013f8a9ffba4
+  </ion-content>
+</ion-view>
