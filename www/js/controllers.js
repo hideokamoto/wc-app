@@ -6,8 +6,8 @@ angular.module( 'starter.controllers', [] )
     endpoint: 'posts'
   };
   WP.Query( $config.apiRoot ).query( query ).$promise.then( function( posts ) {
-    console.log(posts);
     $scope.posts = posts;
+		$scope.title = $config.title;
   } );
 })
 
