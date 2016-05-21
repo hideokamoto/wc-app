@@ -11,7 +11,7 @@
           </ion-list>
           <p>{{ post.date | date:'yyyy.MM.dd HH:mm'}}</p>
         </div>
-        <div class="item item-body" ng-bind-html="post.content">{{ post.content }}</div>
+        <div class="item item-body" ng-bind-html="post.content">{{ post.excerpt }}</div>
         <div class="item item-avatar">
           <img src="{{ post.author.avatar }}">
           <h2>{{ post.author.name }}</h2>
