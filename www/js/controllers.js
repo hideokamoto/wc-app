@@ -19,7 +19,14 @@ angular.module( 'starter.controllers', [] )
     'filter[posts_per_page]': -1
   };
   WP.Query( $config.apiRoot ).query( query ).$promise.then( ( posts ) => {
-    $scope.posts = posts;
+    var sorted_posts = _.sortBy(posts, ( post ) => {
+      return post.post_meta[0]['value'];
+    });
+    var mapped_posts = _.map( sorted_posts, ( post ) => {
+      post.post_meta[0]['value'] = new Date( post.post_meta[0]['value'] * 1000 ).toUTCString();
+      return post
+    });
+    $scope.posts = mapped_posts;
     $scope.title = $config.title;
   })
 

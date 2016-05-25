@@ -9,7 +9,7 @@
               {{ tag.name }}
             </span>
           </ion-list>
-          <p>{{ post.date | date:'yyyy.MM.dd HH:mm'}}</p>
+          <p>{{ post.post_meta[0]['value'] }}</p>
         </div>
         <div class="item item-body" ng-bind-html="post.excerpt">{{ post.excerpt }}</div>
         <div class="item item-avatar">
