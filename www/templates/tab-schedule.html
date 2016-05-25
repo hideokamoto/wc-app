@@ -1,5 +1,25 @@
-<ion-view view-title="Schedule">
+<ion-view view-title="{{ title }}">
   <ion-content class="padding">
+    <ion-list>
+      <ion-item ng-repeat="post in posts" class="list card">
+        <div class="item item-text-wrap">
+          <h1 ng-bind-html="post.title">{{ post.title }}</h1>
+          <ion-list>
+            <span ng-repeat="tag in post.terms.post_tag">
+              {{ tag.name }}
+            </span>
+          </ion-list>
+          <p>{{ post.date | date:'yyyy.MM.dd HH:mm'}}</p>
+        </div>
+        <div class="item item-body" ng-bind-html="post.excerpt">{{ post.excerpt }}</div>
+        <div class="item item-avatar">
+          <img src="{{ post.author.avatar }}">
+          <h2>{{ post.author.name }}</h2>
+          <p><a href="{{ post.author.URL }}">{{ post.author.URL }}</a></p>
+      </div>
+
+	    </ion-item>
+	  </ion-list>
 		<!-- start loop -->
 		<div class="list card">
 		  <div class="item item-text-wrap">
