@@ -14,7 +14,8 @@ angular.module('starter', [
 ])
 
 .constant( '$config', {
-  apiRoot: 'http://vccw.dev/wp-json'
+  apiRoot: 'https://2016.europe.wordcamp.org/wp-json',
+	title: 'WordCamp EU 2016'
 } )
 
 .run(function($ionicPlatform) {
