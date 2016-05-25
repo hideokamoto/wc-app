@@ -11,7 +11,17 @@ angular.module( 'starter.controllers', [] )
   } );
 })
 
-.controller( 'schedule', function( $scope, $config ) {
+.controller( 'schedule', function( $scope, $config, WP ) {
+  $scope.posts = [];
+  var query = {
+    endpoint: 'posts',
+    type: "wcb_session",
+    'filter[posts_per_page]': -1
+  };
+  WP.Query( $config.apiRoot ).query( query ).$promise.then( ( posts ) => {
+    $scope.posts = posts;
+    $scope.title = $config.title;
+  })
 
 } )
 
