@@ -3,56 +3,17 @@
     <ion-list>
       <ion-item ng-repeat="post in posts" class="list card">
         <div class="item item-text-wrap">
-          <h1 ng-bind-html="post.title">{{ post.title }}</h1>
-          <ion-list>
-            <span ng-repeat="tag in post.terms.post_tag">
-              {{ tag.name }}
-            </span>
-          </ion-list>
+          <h2 ng-bind-html="post.title">{{ post.title }}</h2>
           <p>{{ post.post_meta[0]['value'] }}</p>
         </div>
-        <div class="item item-body" ng-bind-html="post.excerpt">{{ post.excerpt }}</div>
         <div class="item item-avatar">
-          <img src="{{ post.author.avatar }}">
-          <h2>{{ post.author.name }}</h2>
-          <p><a href="{{ post.author.URL }}">{{ post.author.URL }}</a></p>
+          <img src="{{ post.speaker.avatar }}">
+          <h2>{{ post.speaker.title }}</h2>
+          <p>{{ post.terms.wcb_track[0]['name'] }}</p>
       </div>
 
 	    </ion-item>
 	  </ion-list>
-		<!-- start loop -->
-		<div class="list card">
-		  <div class="item item-text-wrap">
-		    <h2>Advanced Topics in WordPress Development</h2>
-				<p>2015-11-03T03:25:05</p>
-				<p>Independence - Room 121</p>
-		  </div>
-		  <div class="item item-avatar">
-				<!-- author.avatar -->
-		    <img src="https://secure.gravatar.com/avatar/01cfe9feaafb068590891bbd1f6a7f5a?s=96">
-		    <h2>Andrew Nacin</h2>
-				<p><a href="http://nacin.com/">http://nacin.com/</a></p>
-		  </div>
-		</div>
-		<div class="list card">
-		  <div class="item item-text-wrap">
-		    <h2>Meeting the New York Times Challenge: delivering the news over HTTPS</h2>
-				<p>2015-11-03T03:25:05</p>
-				<p>Liberty Bell - Room 120</p>
-		  </div>
-
-		  <div class="item item-body">
-		    <p>Last November, The New York Times challenged news sites to fully support HTTPS in 2015. What does it mean to meet that challenge? This session will discuss the problems we encountered moving to HTTPS (and how we solved them). We'&#8217;'ll then give you hands-on help with anything you need: server configuration, certificates, mixed-content warnings, CDNs — even ads, analytics and A/B tests.</p>
-
-		  </div>
-		  <div class="item item-avatar">
-				<!-- author.avatar -->
-		    <img src="https://secure.gravatar.com/avatar/d94ab7776800ced3cd343dac45bf62eb?s=96">
-		    <h2>Paul Schreiber</h2>
-				<p><a href="http://paulschreiber.com/">http://paulschreiber.com/</a></p>
-		  </div>
-		</div>
-		<!-- end loop -->
 
   </ion-content>
 </ion-view>
