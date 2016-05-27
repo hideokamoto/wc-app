@@ -65,6 +65,7 @@ angular.module( 'starter.controllers', [] )
     posts[0].content = posts[0].content.replace( /Click to share on Google\+ \(Opens in new window\)/g , '' ) ;
     posts[0].content = posts[0].content.replace( /Click to share on Pocket \(Opens in new window\)/g , '' ) ;
     posts[0].content = posts[0].content.replace( /Share this:/g , '' ) ;
+    posts[0].post_meta[0]['value'] = new Date( posts[0].post_meta[0]['value'] * 1000 ).toUTCString();
     $scope.posts = posts;
     $scope.title = posts[0].title;
   })
