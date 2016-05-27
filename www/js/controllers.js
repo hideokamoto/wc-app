@@ -51,7 +51,22 @@ angular.module( 'starter.controllers', [] )
   } );
 })
 
-.controller( 'page', function( $scope, $stateParams, $config ) {
-
+.controller( 'session', function( $scope, $stateParams, $config, WP  ) {
+  $scope.config = $config;
+  var query = {
+    endpoint: 'posts',
+    type: "wcb_session",
+    'filter[p]': $stateParams.id
+  };
+  WP.Query( $config.apiRoot ).query( query ).$promise.then( ( posts ) => {
+    posts[0].content = posts[0].content.replace( /Click to share on Twitter \(Opens in new window\)/g , '' ) ;
+    posts[0].content = posts[0].content.replace( /Click to share on Facebook \(Opens in new window\)/g , '' ) ;
+    posts[0].content = posts[0].content.replace( /Click to share on LinkedIn \(Opens in new window\)/g , '' ) ;
+    posts[0].content = posts[0].content.replace( /Click to share on Google\+ \(Opens in new window\)/g , '' ) ;
+    posts[0].content = posts[0].content.replace( /Click to share on Pocket \(Opens in new window\)/g , '' ) ;
+    posts[0].content = posts[0].content.replace( /Share this:/g , '' ) ;
+    $scope.posts = posts;
+    $scope.title = posts[0].title;
+  })
 })
 ;

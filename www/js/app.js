@@ -101,12 +101,12 @@ angular.module('starter', [
     }
   })
 
-  .state('app.page', {
-    url: '/page/:name',
+  .state('app.session', {
+    url: '/session/:id',
     views: {
-      'tab-home': {
-        templateUrl: 'templates/tab-page.html',
-        controller: 'page'
+      'tab-schedule': {
+        templateUrl: 'templates/tab-session.html',
+        controller: 'session'
       }
     }
   });
