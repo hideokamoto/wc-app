@@ -1,6 +1,6 @@
 <ion-view>
   <ion-content class="padding">
-    <h2>{{ post.title }}</h2>
+    <h2 ng-bind-html="post.title">{{ post.title }}</h2>
     <div ng-bind-html="post.content">{{ post.content }}</div>
   </ion-content>
 </ion-view>
